@@ -33,18 +33,22 @@ Given our choice, we can now think of a vector as a scaled version of our basis 
   1 &amp;amp; 0 \
   0 &amp;amp; 1
  \end{pmatrix}
-]
-As in our standard system we always refer to (i) and (j) as our basis, we can ignore them and just use the following notation:
-[
+]&lt;/p&gt;
+
+&lt;p&gt;As in our standard system we always refer to (i) and (j) as our basis, we can ignore them and just use the following notation:&lt;/p&gt;
+
+&lt;p&gt;[
   v=\begin{pmatrix}
   3\
   2
  \end{pmatrix}
 ]&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Some thoughts on linear transformation&lt;/strong&gt;
-When it comes to matrix-vector multiplication, we can think of the matrix in terms of some linear transformation that will redefine the bases of the coordinate system. Applying some transformation (A) to vector (v) from above:
-[
+&lt;p&gt;&lt;strong&gt;Some thoughts on linear transformation&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;When it comes to matrix-vector multiplication, we can think of the matrix in terms of some linear transformation that will redefine the bases of the coordinate system. Applying some transformation (A) to vector (v) from above:&lt;/p&gt;
+
+&lt;p&gt;[
  Av=\begin{pmatrix}
   1 &amp;amp; 2 \
   4 &amp;amp; 3
@@ -53,9 +57,11 @@ When it comes to matrix-vector multiplication, we can think of the matrix in ter
   3\
   2
  \end{pmatrix}
-]
-is actually equivalent to scaling the column vectors of (A) by the entries of (v):
-[
+]&lt;/p&gt;
+
+&lt;p&gt;is actually equivalent to scaling the column vectors of (A) by the entries of (v):&lt;/p&gt;
+
+&lt;p&gt;[
  Av=2\begin{pmatrix}
   1 \
   2
@@ -77,12 +83,13 @@ is actually equivalent to scaling the column vectors of (A) by the entries of (v
 &lt;p&gt;The reason I emphasised those imaginary gridlines drawn by our chosen units of basis earlier was to put you into perspective on which system of bases we are referring to. To understand this new vector in terms of your new bases, you would want to think your bases as your new units of measurement. That is, you would like to teleport from thinking of (\begin{pmatrix}1 \ 4\end{pmatrix}) as (\begin{pmatrix}1 \ 0\end{pmatrix}) and of (\begin{pmatrix}2 \ 3\end{pmatrix}) as (\begin{pmatrix}0 \ 1\end{pmatrix}). I recommend you try to visualise this in your head - or have a look at &lt;a href=&#34;https://www.youtube.com/watch?v=kYB8IZa5AuE&#34;&gt;this&lt;/a&gt;.
 We can think of some linear operation as stretching, compressing, rotating, flipping our space, or well.. adjusting those gridlines along which we can refer to points in space.&lt;/p&gt;
 
-&lt;p&gt;We are almost there, yay! By now, you may already be pondering about a couple of things&amp;hellip;
+&lt;p&gt;We are almost there, yay! By now, you may already be pondering about a couple of things…
 ((i)) &lt;em&gt;How is a point in space represented in one system compared to another?&lt;/em&gt;
 ((ii)) &lt;em&gt;And how do we understand the same linear transformation in another system?&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Let me jump on the first one.&lt;/strong&gt;
-As stated earlier, a vector is just a scaled version of its bases. Remember, it is really just the product of a matrix (whose columns are the bases) and a vector whose entries are the components). What we did earlier was preserving the component space, but transforming our system of bases. This ended up taking us to a new point in space. So how do we make sure to stay in the same point? Well, we need to apply some different transformation to our new basis vectors.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Let me jump on the first one.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;As stated earlier, a vector is just a scaled version of its bases. Remember, it is really just the product of a matrix (whose columns are the bases) and a vector whose entries are the components). What we did earlier was preserving the component space, but transforming our system of bases. This ended up taking us to a new point in space. So how do we make sure to stay in the same point? Well, we need to apply some different transformation to our new basis vectors.&lt;/p&gt;
 </description>
     </item>
     
