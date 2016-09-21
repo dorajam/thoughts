@@ -22,9 +22,9 @@
 &lt;p&gt;To represent different points in space we need some sort of unit of measurement that allows us to speak about things in the same language. Space has no intrinsic grid. Our chosen units will allow us to understand space by breaking it into some imaginary gridlines. Along these gridlines we can define any point by using our unit of basis. This basis serves as some kind of constructing element or brick that makes up the whole.&lt;/p&gt;
 
 &lt;p&gt;Now imagine a flat world, a two-dimensional universe or plane that’s defined along x and y axes. The conventional way of representing points in 2D space is to use the standard coordinate system, defined by the basis vectors (i) and (j). Notice, that it is just a choice we have collectively made. We could also represent points in 2D using some alternative units of measurement (i.e. along some different set of gridlines).
-Given our choice, we can now think of a vector as a scaled version of our basis vectors (i) and (j):&lt;/p&gt;
-
-&lt;p&gt;[
+Given our choice, we can now think of a vector as a scaled version of our basis vectors (i) and (j):
+$$
+[
   v=\begin{pmatrix}
   3\
   2
@@ -33,11 +33,10 @@ Given our choice, we can now think of a vector as a scaled version of our basis 
   1 &amp;amp; 0 \
   0 &amp;amp; 1
  \end{pmatrix}
-]&lt;/p&gt;
-
-&lt;p&gt;As in our standard system we always refer to (i) and (j) as our basis, we can ignore them and just use the following notation:&lt;/p&gt;
-
-&lt;p&gt;[
+]
+$$
+As in our standard system we always refer to (i) and (j) as our basis, we can ignore them and just use the following notation:
+[
   v=\begin{pmatrix}
   3\
   2
