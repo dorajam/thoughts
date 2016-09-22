@@ -80,7 +80,6 @@
 
 <p>Now imagine a flat world, a two-dimensional universe or plane that’s defined along x and y axes. The conventional way of representing points in 2D space is to use the standard coordinate system, defined by the basis vectors (i) and (j). Notice, that it is just a choice we have collectively made. We could also represent points in 2D using some alternative units of measurement (i.e. along some different set of gridlines).
 Given our choice, we can now think of a vector as a scaled version of our basis vectors (i) and (j):
-<div>
 [
   v=\begin{pmatrix}
   3\
@@ -91,7 +90,6 @@ Given our choice, we can now think of a vector as a scaled version of our basis 
   0 &amp; 1
  \end{pmatrix}
 ]
-</div>
 As in our standard system we always refer to (i) and (j) as our basis, we can ignore them and just use the following notation:
 <div>$$
 [
@@ -203,7 +201,19 @@ We can think of some linear operation as stretching, compressing, rotating, flip
 
     </footer>
 </article>
-r<script>renderMathInElement(document.body);</script>
+    <script>
+      renderMathInElement(
+          document.body,
+          {
+              delimiters: [
+                  {left: "$$", right: "$$", display: true},
+                  {left: "\\[", right: "\\]", display: true},
+                  {left: "$", right: "$", display: false},
+                  {left: "\\(", right: "\\)", display: false}
+              ]
+          }
+      );
+    </script>
 
 	</div>
 </main>
