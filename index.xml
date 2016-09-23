@@ -23,10 +23,9 @@
 
 &lt;p&gt;Now imagine a flat world, a two-dimensional universe or plane that’s defined along x and y axes. The conventional way of representing points in 2D space is to use the standard coordinate system, defined by the basis vectors (i) and (j). (Notice, this is just a choice we have collectively made. We could also represent points in 2D using some alternative units of measurement (i.e. along some different set of gridlines)).&lt;/p&gt;
 
-&lt;p&gt;Given our choice, we can now think of a vector as a scaled version of our basis vectors (i) and (j):&lt;/p&gt;
+&lt;p&gt;Given our choice, we can now think of a vector as a scaled version of our basis vectors &lt;code&gt;\(i\)&lt;/code&gt; and &lt;code&gt;\(j\)&lt;/code&gt;:&lt;/p&gt;
 
 &lt;p&gt;[
-$$
   v=\begin{pmatrix}
   3\
   2
@@ -35,17 +34,16 @@ $$
   1 &amp;amp; 0 \
   0 &amp;amp; 1
  \end{pmatrix}
- $$
 ]&lt;/p&gt;
 
 &lt;p&gt;As in our standard system we always refer to (i) and (j) as our basis, we can ignore them and just use the following notation:&lt;/p&gt;
 
-&lt;p&gt;[
+&lt;p&gt;$$
   v=\begin{pmatrix}
   3\
   2
  \end{pmatrix}
-]&lt;/p&gt;
+ $$&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Some thoughts on linear transformation&lt;/strong&gt;&lt;/p&gt;
 
