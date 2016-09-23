@@ -26,6 +26,7 @@
 &lt;p&gt;Given our choice, we can now think of a vector as a scaled version of our basis vectors (i) and (j):&lt;/p&gt;
 
 &lt;p&gt;[
+$$
   v=\begin{pmatrix}
   3\
   2
@@ -34,6 +35,7 @@
   1 &amp;amp; 0 \
   0 &amp;amp; 1
  \end{pmatrix}
+ $$
 ]&lt;/p&gt;
 
 &lt;p&gt;As in our standard system we always refer to (i) and (j) as our basis, we can ignore them and just use the following notation:&lt;/p&gt;
