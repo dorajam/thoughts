@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" prefix="og: http://ogp.me/ns#" xmlns:og="http://ogp.me/ns#"><!--<![endif]-->
+
+    <head>
+                <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="author" content="Dora Jambor">
+        <meta name="keywords" content="awesome, definitely">
+	
+        <meta property="og:site_name" content="DORA JAMBOR">
+        <meta property="og:title" content="DORA JAMBOR">
+        <meta property="og:url" content="https://dorajam.github.io/thoughts/post/eigenvalues/">
+        <meta property="og:description" content="Things that tickle my mind">
+    
+        <meta property="og:type" content="article" />
+        <meta property="og:article:author" content="Dora Jambor" />
+        <meta property="og:article:published_time" content="2016-09-23T18:27:39&#43;02:00" />
+    
+        <meta name="generator" content="Hugo 0.15" />
+        <title>eigenvalues &middot; DORA JAMBOR </title>
+        <link rel="canonical" href="https://dorajam.github.io/thoughts/" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="">
+        <link rel="stylesheet" type='text/css' href="https://dorajam.github.io/thoughts/css/main.css"/>
+        <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300|Montserrat:700' rel='stylesheet' type='text/css'>
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+        <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript"
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        </script>
+        <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+        tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        displayMath: [['$$','$$'], ['\[','\]']],
+        processEscapes: true,
+        processEnvironments: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+         }
+        });
+        </script>
+
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Queue(function() {
+        
+        
+        
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i = 0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }   
+        });
+    </script>
+    </head>
+
+<body>
+<!--[if lt IE 7]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chrome/‎">install Google Chrome</a> to experience this site.</p><![endif]-->
+
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+	
+	
+	
+	
+	
+ 	
+
+  
+    <div class="container">
+	    <a class = "icon" style="cursor:pointer" href= "https://twitter.com/dorajambor"><img src="https://dorajam.github.io/thoughts/twitter.png" width=20 alt="t"></a>
+					<a class = "icon" href= "https://www.linkedin.com/in/dorajambor"><img src="https://dorajam.github.io/thoughts/linkedin.png" width=16 alt="in"></a>
+					<a class = "icon" href= "https://github.com/dorajam"><img src="https://dorajam.github.io/thoughts/github.png" width=16 alt="git"></a>	
+					<a class = "icon" href= "mailto:dorajambor@gmail.com"><img src="https://dorajam.github.io/thoughts/gmail.png" width=16.5 alt="g"></a>
+
+          <div class="post-time" style="width:100; float:right">
+          <a href="https://dorajam.github.io/thoughts/" alt="Home"><p style="font-size:15px">Home</p></a>
+          
+          </div>
+    </div>
+</nav>
+
+  
+<main class="content" role="main">
+	<div class="container">
+		<article class="post">
+	<header class="post-header">
+        <h3 class="p-post-title">eigenvalues</h3>
+    </header>
+
+    <section class="post-content">
+        <p>This article aims to give a thorough intuition behind the significance of eigenvectors.</p>
+
+<p>The first time I got introduced to eigenvectors and eigenvalues, I thought ‘wow this is easy, what’s all the fuss about’. Yet further down the line upon discovering that these concepts are actually used in some very complex systems, I started losing my confidence. There was one question I just could not answer to myself:</p>
+
+<p><em>Why do eigenvalues matter so much? And how can they be applied to such a wide variety of areas?</em></p>
+
+<p>Generally, I find that there is a huge gap between familiarising oneself with the math of linear algebra and actually developing a visual intuition behind core concepts. Due to the lack of focus on the latter, this aspect of the field only tends to develop over a long course of time. This should not be this way though.</p>
+
+<p>Recognising this for myself has made me develop quite a strong love for the field. With this post, I will attempt to give you a fun introduction to the significance of eigenvalues and thereby hope you’ll start seeing the bright light at the end of the tunnel of all those dry mathematical derivations.</p>
+
+<p><strong>An introduction to eigenvectors and eigenvalues</strong>
+And here we begin. You have probably stumbled upon the definition of eigenvalues:
+$$
+\begin{align}
+AV=\lambda v
+\end{align}
+$$</p>
+
+<p>Where <code>$v$</code> is an eigenvector and <code>$\lambda $</code> is the corresponding eigenvalue. Let’s look at the right side first: You have a vector <code>$v$</code> that you apply the linear transformation <code>$A$</code>. On the left: you have the same <code>$v$</code> vector, but now scaled by some scalar value.</p>
+
+<p>So you can think of eigenvectors as vectors that do not change their direction after some linear transformation, but merely get scaled by some value. (well, they get reversed if the eigenvalue is negative).</p>
+
+<p>Now going back to the world of linear transformation, you can think of <code>$A$</code> as some linear transformation and <code>$v$</code> as a vector that’s a linear combination of the bases of the space it is defined in (let’s say v = alpha*i + beta*j where alpha and beta are members of the component space). When applying A linear transformation to v, you are actually transforming the whole vector space v was defined in. But hey v was defined in terms of the bases of that space (e.g. i and j), so the bases of the new vector ‘Av&rsquo; will be some new i&rsquo; and j’ basis vectors. This is where it is extremely important that you understand what’s going on visually.</p>
+
+<p>If you have difficulty internalising this, I <strong>very much</strong> recommend you read my previous post on <a href="https://dorajam.github.io/thoughts/post/change-of-basis/">changing the basis</a> of some vector space.</p>
+
+<p>With this in mind, we can think of eigenvectors as vectors that preserve their directions in this new transformed universe. What’s so fascinating about this is that we can transform any vector from the original vector space into this new space just by knowing what the transformation’s eigenpairs are. Doing this will allow us to reduce massive amounts of information that’s needed to reconstruct all points in this new, transformed universe!</p>
+
+<p><strong>What’s more, we can think about eigenvalues in terms of polynomials!</strong></p>
+
+<p>The concept of roots is important as they serve as some fixed ground to a polynomial. Upon finding all roots to a function, we have some notion of the function shape. The same way, we can think of eigenvectors as some components of a vector space that limit the behaviour of a linear transformation.</p>
+
+<p>Good news, you don’t need to blindly trust me on this one.
+Remember equation <code>$(1)$</code>, we can derive the eigenpairs by finding the null space of the determinant of A - /\I (i.e. det(A-/\I) = 0). If A is R(nxn) then the determinant of the latter term will result in a polynomial of degree n. By the fundamental theorem of algebra, a polynomial of degree n has n (not necessarily unique) complex roots. These are the eigenvalues of A. We can think about these values as <em>”how much should linear transformation A be distorted so that we’ll end up in null space?”</em></p>
+
+<p>Why do we care about ending up in null space? Because this is the place where things go extinct. There is no way of reconstructing the previous vector space if all dimensions cease to exist. Think about matrix inversion! You could not flip space back into its original state as you just lost all your information about where you were (with no notation of basis!)</p>
+
+<p>Fascinating, isn’t it?</p>
+
+<p>To summarise this point, roughly you could say that the “degree&rdquo; and the orientation of a distortion induced by the transformation can be measured by eigenvalues and eigenvectors, respectively.</p>
+
+<p>If this wasn’t fascinating enough, allow me to keep going.</p>
+
+<p><strong>Dimensionality Reduction and eigenbases</strong>
+You may have heard that this can all be applied to <strong>dimensionality reduction</strong>. How so? Well, let’s see.
+Eigenvectors are linearly independent. That means, that no eigenvector can be reconstructed by taking a linear combination of another eigenvector: we just simply need them all! This might already make you ponder, would it be possible to switch from using our standard basis vectors to using these powerful eigenvectors that share this special quality? Well it depends.</p>
+
+<p>There are three scenarios when decomposing eigenvectors:
+<strong>(i)</strong> <em>no eigenvectors exist</em>
+<strong>(ii)</strong> _the number of eigenvectors is less than the number of dimensions__
+<strong>(iii)</strong> <em>the number of eigenvectors is the same as the number of dimensions</em></p>
+
+    </section>
+
+    <hr >
+
+    <footer class="post-footer">
+        <section class="f-1">
+            
+            <section class="author">
+                <p>Words by Dora Jambor</p>
+            </section>
+            
+            
+            <p class="f-post-time"><time datetime="2016-09-23T18:27:39&#43;02:00">September 23, 2016</time></p>
+        </section>
+                        
+        <section class="f-2">
+            <section class="share">
+                <span>Share:
+                <a class="icon-twitter" href="http://twitter.com/share?text=eigenvalues&url=https%3a%2f%2fdorajam.github.io%2fthoughts%2fpost%2feigenvalues%2f"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fdorajam.github.io%2fthoughts%2fpost%2feigenvalues%2f"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fdorajam.github.io%2fthoughts%2fpost%2feigenvalues%2f"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="fa fa-google-plus"></i>
+                </a>
+                </span>
+            </section>
+
+            
+        </section>
+
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'http-dorajam-github-io-thoughts';
+    var disqus_identifier = 'https:\/\/dorajam.github.io\/thoughts\/post\/eigenvalues\/';
+    var disqus_title = 'eigenvalues';
+    var disqus_url = 'https:\/\/dorajam.github.io\/thoughts\/post\/eigenvalues\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </footer>
+</article>
+
+	</div>
+</main>
+    <footer id="site-footer">
+
+    <script type="text/javascript" src="https://dorajam.github.io/thoughts/js/fittext.js"></script>
+    <script type="text/javascript">
+      $(".heading").fitText();
+    </script>
+    
+    </footer>
+
+
+
+</body>
+</html>
