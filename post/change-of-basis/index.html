@@ -32,6 +32,39 @@
         <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300|Montserrat:700' rel='stylesheet' type='text/css'>
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
         <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript"
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        </script>
+        <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+        tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        displayMath: [['$$','$$'], ['\[','\]']],
+        processEscapes: true,
+        processEnvironments: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+         }
+        });
+        </script>
+
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Queue(function() {
+        
+        
+        
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i = 0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }   
+        });
+    </script>
+    code.has-jax {font: inherit;
+              font-size: 100%;
+              background: inherit;
+              border: inherit;
+              color: #515151;}
     </head>
 
 <body>
@@ -76,9 +109,10 @@
 <p>To represent different points in space we need some sort of unit of measurement that allows us to speak about things in the same language. Space has no intrinsic grid. Our chosen units will allow us to understand space by breaking it into some imaginary gridlines. Along these gridlines we can define any point by using our unit of basis. This basis serves as some kind of constructing element or brick that makes up the whole.</p>
 
 <p>Now imagine a flat world, a two-dimensional universe or plane that’s defined along x and y axes. The conventional way of representing points in 2D space is to use the standard coordinate system, defined by the basis vectors (i) and (j). Notice, that it is just a choice we have collectively made. We could also represent points in 2D using some alternative units of measurement (i.e. along some different set of gridlines).
-Given our choice, we can now think of a vector as a scaled version of our basis vectors (i) and (j):</p>
+Given our choice, we can now think of a vector as a scaled version of our basis vectors <code>\(i\)</code> and <code>\(j\)</code>:</p>
 
-<p>[
+<p>$$
+[
   v=\begin{pmatrix}
   3\
   2
@@ -87,9 +121,9 @@ Given our choice, we can now think of a vector as a scaled version of our basis 
   1 &amp; 0 \
   0 &amp; 1
  \end{pmatrix}
-]</p>
-
-<p>As in our standard system we always refer to (i) and (j) as our basis, we can ignore them and just use the following notation:
+]
+$$
+As in our standard system we always refer to (i) and (j) as our basis, we can ignore them and just use the following notation:
 <div>$$
 [
   v=\begin{pmatrix}
