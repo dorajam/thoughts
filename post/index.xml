@@ -48,8 +48,9 @@
   3\\
   2
  \end{pmatrix}
-$$&lt;/code&gt;&lt;br /&gt;
-or put differently, a linear combination of the bases of our vector space:
+$$&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;or put differently, a linear combination of the bases of our vector space:
 &lt;code&gt;$$
  v=2\begin{pmatrix}
   1 \\
