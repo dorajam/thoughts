@@ -126,7 +126,8 @@ Av=\begin{pmatrix}
   5
  \end{pmatrix}i
  $$&lt;/code&gt;&lt;br /&gt;
-&amp;ndash;&amp;gt;&lt;em&gt;{change of basis matrix x vector in our language = her vector in our language}&lt;/em&gt;&amp;lt;&amp;ndash;&lt;/p&gt;
+\begin{center}
+\textit{change of basis matrix x vector in our language = her vector in our language}\end{center}&lt;/p&gt;
 
 &lt;p&gt;But for her, the same vector is understood as:
 &lt;code&gt;$$
@@ -154,7 +155,8 @@ Consequently, vector &lt;code&gt;\(v\)&lt;/code&gt; in her language can be descr
   1/3
  \end{pmatrix}
 $$&lt;/code&gt;&lt;br /&gt;
-&amp;ndash;&amp;gt;&lt;em&gt;{inverse change of basis matrix x vector in our language = vector in her language}&lt;/em&gt;&amp;lt;&amp;ndash;&lt;/p&gt;
+\begin{center}
+\textit{inverse change of basis matrix x vector in our language = vector in her language}\end{center}&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;Remember, this inverse trick makes it possible to translate back and forth from different coordinate systems.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 
@@ -184,7 +186,8 @@ Notice that applying M directly to an alternative system is not equal to perform
   1 &amp;amp; 1
  \end{pmatrix}v
 $$&lt;/code&gt;&lt;br /&gt;
-&amp;ndash;&amp;gt;&lt;em&gt;{inverse change of basis matrix x vector in our language = vector in her language}&lt;/em&gt;&amp;lt;&amp;ndash;&lt;/p&gt;
+\begin{center}
+\textit{inverse change of basis matrix x vector in our language = vector in her language}\end{center}&lt;/p&gt;
 
 &lt;p&gt;That is,&lt;br /&gt;
 1. we first understand where Jennifer’s unit vectors are by scaling our bases (in our language)&lt;br /&gt;
