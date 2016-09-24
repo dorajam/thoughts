@@ -49,7 +49,7 @@
   2
  \end{pmatrix}
 $$&lt;/code&gt;
-or put differently, a linear combination of the bases of our vector space.
+or put differently, a linear combination of the bases of our vector space:
 &lt;code&gt;$$
  v=2\begin{pmatrix}
   1 \\
