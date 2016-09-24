@@ -126,8 +126,8 @@ Av=\begin{pmatrix}
   5
  \end{pmatrix}
  $$&lt;/code&gt;&lt;br /&gt;
-&amp;rdquo;&amp;rsquo;\begin{center}
-\textit{change of basis matrix x vector in our language = her vector in our language}\end{center}&amp;ldquo;&amp;rsquo;&lt;/p&gt;
+&amp;rdquo;&amp;lsquo;$$\begin{center}
+\textit{change of basis matrix x vector in our language = her vector in our language}\end{center}$$&amp;ldquo;&amp;rsquo;&lt;/p&gt;
 
 &lt;p&gt;But for her, the same vector is understood as:
 &lt;code&gt;$$
