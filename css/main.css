@@ -1002,3 +1002,7 @@ nav#navbar-main li {
 	right:0;
 	top:0;
 }
+
+.katex-display {
+    all: revert;
+}
