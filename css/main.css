@@ -1002,3 +1002,9 @@ nav#navbar-main li {
 	right:0;
 	top:0;
 }
+
+pre {
+    background-color: none;
+    border: none;
+    font-size = 100%;
+}
