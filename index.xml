@@ -120,7 +120,7 @@ Av=\begin{pmatrix}
   \begin{pmatrix}
   3\\
   2
- \end{pmatrix}i=
+ \end{pmatrix}=
   \begin{pmatrix}
   4\\
   5
@@ -142,11 +142,11 @@ Consequently, vector &lt;code&gt;\(v\)&lt;/code&gt; in her language can be descr
 \begin{pmatrix}
   1/3 &amp;amp; 1/3 \\
   -1/3 &amp;amp; 2/3
- \end{pmatrix}^{-1}
+ \end{pmatrix}
   \begin{pmatrix}
   3\\
   2
- \end{pmatrix}i=
+ \end{pmatrix}=
 \begin{pmatrix}
   5/3\\
   1/3
@@ -165,7 +165,7 @@ by performing a rotation as a transformation. This operation is then denoted by 
 $$&lt;/code&gt;&lt;br /&gt;
 Notice that applying M directly to an alternative system is not equal to performing the same 90-degree rotation. Why? Think about a stretched out space! Now the angle between the basis vectors may be greater than 90 degrees, resulting in a different point in space than where we intended to land.&lt;/p&gt;
 
-&lt;p&gt;So let’s describe Jennifer’s landing point in her language:
+&lt;p&gt;So let’s describe the correct transformation in Jennifer&amp;rsquo;s language:
 &lt;code&gt;$$
 \begin{pmatrix}
   2 &amp;amp; -1 \\
@@ -178,9 +178,12 @@ Notice that applying M directly to an alternative system is not equal to perform
 \begin{pmatrix}
   2 &amp;amp; -1 \\
   1 &amp;amp; 1
+ \end{pmatrix}v=
+\begin{pmatrix}
+  1/3 &amp;amp; -2/3 \\
+  5/3 &amp;amp; -1/3
  \end{pmatrix}v
 $$&lt;/code&gt;&lt;br /&gt;
-&amp;rdquo;&amp;rsquo;&lt;br /&gt;
 That is,&lt;br /&gt;
 1. we first understand where Jennifer’s unit vectors are by scaling our bases (in our language)&lt;br /&gt;
 2. then apply the rotation (in our language)&lt;br /&gt;
