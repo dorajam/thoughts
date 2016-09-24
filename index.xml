@@ -189,12 +189,11 @@ That is,&lt;br /&gt;
 2. then apply the rotation (in our language)&lt;br /&gt;
 3. finally, translate to her language&lt;/p&gt;
 
-&lt;p&gt;The composition of these three matrices gives us the transformation matrix in Jennifer’s matrix.&lt;/p&gt;
-
-&lt;p&gt;As a final note let’s generalise what happened here. We had some transformation &lt;code&gt;\(M\)&lt;/code&gt; described in our coordinate system, which we translated into another coordinate system:
+&lt;p&gt;The composition of these three matrices has translated &lt;code&gt;\(M\)&lt;/code&gt;, a 90-degree rotation described in our vector space, to Jennifer&amp;rsquo;s coordinate system.
+In general, whenever you see an expression of the following form:
 &lt;code&gt;$$A^{-1}MA
-$$&lt;/code&gt;
-Whenever you see an expression like this, it implies that we have shifted our perspective into an alternative system of coordinates. This will be extremely important for my next post on eigenvalues.&lt;/p&gt;
+$$&lt;/code&gt;&lt;br /&gt;
+it implies that we have shifted our perspective into an alternative system of coordinates. This will be extremely important for my next post on eigenvalues.&lt;/p&gt;
 </description>
     </item>
     
