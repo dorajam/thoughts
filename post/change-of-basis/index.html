@@ -92,7 +92,7 @@
  The conventional way of representing points in 2D space is
  to use the standard coordinate system, defined by the basis vectors <code>\(i\)</code> and <code>\(j\)</code>.
   (Notice, this is just a choice we have collectively made. We could also represent points in 2D using some alternative units of measurement i.e. along some different set of gridlines).<br />
-We can now think of a vector as a scaled version of our chosen basis vectors <code>/(i/)</code> and <code>/(j/)</code>:</p>
+We can now think of a vector as a scaled version of our chosen basis vectors <code>\(i\)</code> and <code>\(j\)</code>:</p>
 
 <pre><code>$$
   v=\begin{pmatrix}
@@ -110,21 +110,25 @@ We can now think of a vector as a scaled version of our chosen basis vectors <co
 $$
 </code></pre>
 
-<p><strong>Some thoughts on linear transformation</strong>
+<p><strong>Some thoughts on linear transformation</strong><br />
 When it comes to matrix-vector multiplication, we can think of the matrix in terms of some linear transformation that will redefine the bases of
  the coordinate system. Applying transformation <code>\(A\)</code> to vector <code>\(v\)</code> from above,</p>
 
-<pre><code class="language-$$"> Av=\begin{pmatrix}
-  1 &amp; 2 \\
+<pre><code>$$
+ Av=\begin{pmatrix}
+ 1 &amp; 2 \\
   4 &amp; 3
  \end{pmatrix}*
   \begin{pmatrix}
   3\\
   2
  \end{pmatrix}
-$$```
-is actually equivalent to scaling the column vectors of \(A\) by the entries of \(v\):
-```$$
+$$
+</code></pre>
+
+<p>is actually equivalent to scaling the column vectors of <code>\(A\)</code> by the entries of <code>\(v\)</code>:</p>
+
+<pre><code>$$
  Av=2\begin{pmatrix}
   1 \\
   2
@@ -142,69 +146,78 @@ $$
 
 <p>This is beautifully illustrated by <a href="https://www.youtube.com/watch?v=P2LTAUO1TdA">3Blue1Brown</a> on Youtube.</p>
 
-<p>The reason I emphasised those imaginary gridlines drawn by our chosen units of basis earlier was to put us into perspective on which system of bases we are referring to. To understand this new vector in terms of your new bases, we would want to think of our bases as the new units of measurement. To do this, let&rsquo;s teleport from thinking of (\begin{pmatrix}1 \ 4\end{pmatrix}) as (\begin{pmatrix}1 \ 0\end{pmatrix}) and of (\begin{pmatrix}2 \ 3\end{pmatrix}) as (\begin{pmatrix}0 \ 1\end{pmatrix}). To carry out this backwards transition we need to apply the inverse of the same operation. This inverse matrix can then be thought of as ‘undoing’ the original transformation, hence serving our goal perfectly.</p>
+<p>The reason I emphasised those imaginary gridlines drawn by our chosen units of basis earlier
+was to put us into perspective on which system of bases we are referring to. To understand this new vector in terms of your new bases,
+we would want to think of our bases as the new units of measurement. To do this, let&rsquo;s teleport from thinking of
+<code>\(\begin{pmatrix}1 \\ 4\end{pmatrix}\)</code> as <code>\(\begin{pmatrix}1 \\ 0\end{pmatrix}\)</code> and of <code>\(\begin{pmatrix}2 \\ 3\end{pmatrix}\)</code> as <code>\(\begin{pmatrix}0 \\ 1\end{pmatrix}\)</code>.
+To carry out this backwards transition we need to apply the inverse of the same operation. This inverse matrix can then be thought of as ‘undoing’ the original transformation, hence serving our goal perfectly.</p>
 
 <p>I recommend you try to visualise this in your head - or have a look at <a href="https://www.youtube.com/watch?v=kYB8IZa5AuE">this</a>.
 With this I hope it becomes clear that a linear transformation is equivalent to stretching, compressing, rotating, flipping our space and thus, adjusting the gridlines that serve as our reference points.</p>
 
 <p>We are almost there, yay! By now, you may already be pondering about a couple of things…<br />
-<code>\(i\)</code> <em>How is a point in space represented in one system compared to another?</em><br />
-<code>\(ii\)</code> <em>And how do we understand the same linear transformation in another system?</em></p>
+<code>\((i)\)</code> <em>How is a point in space represented in one system compared to another?</em><br />
+<code>\((ii)\)</code> <em>And how do we understand the same linear transformation in another system?</em></p>
 
 <p><strong>Let&rsquo;s jump on the first one&hellip;</strong><br />
 I’m going to rely on my favourite 3Blue1Brown guy’s explanation and use Jennifer as the representative of some alternative coordinate system.
-As stated earlier, a vector is just a scaled version of its bases. Remember, it really is just the product of a matrix (whose columns are the bases) and a vector whose entries are the components). What we did earlier was preserving the component space, but transforming our system of basis to Jennifer&rsquo;s. Once again, let me clarify, this new system of bases is described in our units <code>/(i/)</code> and <code>/(j/)</code>.</p>
+As stated earlier, a vector is just a scaled version of its bases. Remember, it really is just the product of a matrix (whose columns are the bases) and a vector whose entries are the components). What we did earlier was preserving the component space, but transforming our system of basis to Jennifer&rsquo;s. Once again, let me clarify, this new system of bases is described in our units <code>\(i\)</code> and <code>\(j\)</code>.</p>
 
 <p>Geometrically this transformation can give us an insight into what Jennifer’s system is like, yet mathematically it is a translation of her world to our world.</p>
 
 <p>When we referred to the same vector but in two different systems, we in fact ended up talking about two different points in space. So how do we make sure to refer to the same point? Well, we need to apply some different transformation to Jennifer’s basis vectors. This is again where the inverse transformation comes in handy.
-So let’s flip this around, and try to understand a vector from Jennifer’s point of view:</p>
+So let’s flip this around, and understand a vector from Jennifer’s point of view.</p>
 
-<p>From my point of view, vector <code>/(v/)</code> in her world is:<br />
-<code>$$
+<p>First, to me vector <code>\(v\)</code> in her world is:</p>
+
+<pre><code>$$
 \begin{pmatrix}
   2 &amp; -1 \\
   1 &amp; 1
- \end{pmatrix}i
+ \end{pmatrix}
   \begin{pmatrix}
   3\\
   2
- \end{pmatrix}
- $$</code>
- \boldsymbol{\textsl{Change of basis matrix * Vector in our language = her vector in my language}}</p>
+ \end{pmatrix}i
+ $$
+</code></pre>
+
+<p><code>\boldsymbol{\textsl{Change of basis matrix * Vector in our language = her vector in my language}}</code></p>
 
 <p>But for her the same vector is understood as:<br />
 <code>$$
 \begin{pmatrix}
   2 &amp; -1 \\
   1 &amp; 1
- \end{pmatrix}^{-1}i
+ \end{pmatrix}^{-1}
   \begin{pmatrix}
   3\\
   2
- \end{pmatrix}
+ \end{pmatrix}i
 $$</code>
-Consequently, vector <code>/(v/)</code> in her language can be described as follows:<br />
+Consequently, vector <code>\(v\)</code> in her language can be described as follows:<br />
 <code>$$
 \begin{pmatrix}
   1/3 &amp; 1/3 \\
   -1/3 &amp; 2/3
- \end{pmatrix}^{-1}i
+ \end{pmatrix}^{-1}
   \begin{pmatrix}
   3\\
   2
- \end{pmatrix}=
+ \end{pmatrix}i=
 \begin{pmatrix}
   5/3\\
   1/3
  \end{pmatrix}
-$$</code>
-\boldsymbol{\textsl{Inverse change of basis matrix * Vector in my language = vector in her language}}</p>
+$$</code></p>
 
-<p><strong>Remember, this inverse trick makes it possible to translate back and forth from different coordinate systems.</strong></p>
+<p><code>$ \boldsymbol{\textsl{Inverse change of basis matrix * Vector in my language = vector in her language}}$</code></p>
+
+<p><em><strong>Remember, this inverse trick makes it possible to translate back and forth from different coordinate systems.</strong></em></p>
 
 <p><strong>Let&rsquo;s tackle the second question&hellip;</strong><br />
-Similarly as in <a href="https://www.youtube.com/watch?v=P2LTAUO1TdA">3Blue1Brown</a>, I’m going to demonstrate this by performing a rotation as a transformation. This operation is then denoted by the landing points of rotating both /(i/) and /(j/) in our coordinate system.
+Similarly as in <a href="https://www.youtube.com/watch?v=P2LTAUO1TdA">3Blue1Brown</a>, I’m going to demonstrate this
+by performing a rotation as a transformation. This operation is then denoted by the landing points of rotating both <code>\(i\)</code> and <code>\(j\)</code> in our coordinate system.
 [
  M=\begin{pmatrix}
   0 &amp; -1 \
