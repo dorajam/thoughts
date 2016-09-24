@@ -187,7 +187,7 @@ Notice that applying M directly to an alternative system is not equal to perform
  \end{pmatrix}v
 $$&lt;/code&gt;&lt;br /&gt;
 &amp;rdquo;&amp;rsquo;
-textit{inverse change of basis matrix x vector in our language = vector in her language}&amp;ldquo;&amp;rsquo;&lt;/p&gt;
+&amp;ldquo;&amp;lsquo;$$ \textit{inverse change of basis matrix x vector in our language = vector in her language}$$&amp;ldquo;&amp;rsquo;&lt;/p&gt;
 
 &lt;p&gt;That is,&lt;br /&gt;
 1. we first understand where Jennifer’s unit vectors are by scaling our bases (in our language)&lt;br /&gt;
