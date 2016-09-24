@@ -106,9 +106,8 @@ We can now think of a vector as a scaled version of our chosen basis vectors <co
   3\\
   2
  \end{pmatrix}
-$$</code></p>
-
-<p><strong>Some thoughts on linear transformation</strong><br />
+$$</code>
+<strong>Some thoughts on linear transformation</strong><br />
 When it comes to matrix-vector multiplication, we can think of the matrix in terms of some linear transformation that will redefine the bases of
  the coordinate system. Applying transformation <code>\(A\)</code> to vector <code>\(v\)</code> from above,
 <code>$$
@@ -120,9 +119,7 @@ When it comes to matrix-vector multiplication, we can think of the matrix in ter
   3\\
   2
  \end{pmatrix}
-$$</code></p>
-
-<p>is actually equivalent to scaling the column vectors of <code>\(A\)</code> by the entries of <code>\(v\)</code>:
+$$</code>is actually equivalent to scaling the column vectors of <code>\(A\)</code> by the entries of <code>\(v\)</code>:
 <code>$$
  Av=2\begin{pmatrix}
   1 \\
@@ -199,61 +196,43 @@ Consequently, vector <code>\(v\)</code> in her language can be described as foll
   5/3\\
   1/3
  \end{pmatrix}
-$$</code></p>
-
-<p><code>\boldsymbol{\textsl{Inverse change of basis matrix * Vector in my language = vector in her language}}</code></p>
+$$</code>
+<code>\boldsymbol{\textsl{Inverse change of basis matrix * Vector in my language = vector in her language}}</code></p>
 
 <p><em><strong>Remember, this inverse trick makes it possible to translate back and forth from different coordinate systems.</strong></em></p>
 
 <p><strong>Let&rsquo;s tackle the second question&hellip;</strong><br />
 Similarly as in <a href="https://www.youtube.com/watch?v=P2LTAUO1TdA">3Blue1Brown</a>, I’m going to demonstrate this
 by performing a rotation as a transformation. This operation is then denoted by the landing points of rotating both <code>\(i\)</code> and <code>\(j\)</code> in our coordinate system.
-[
+<code>$$
  M=\begin{pmatrix}
-  0 &amp; -1 \
+  0 &amp; -1 \\
   1 &amp; 0
  \end{pmatrix}
-]
-You can think about this in terms of some linear transformation to i and j. Even though such operation may be understood as teleporting from one system of bases into another, it is important to notice that the result is still in terms of i and j. Consequently, you should think about A as translating an alternative system’s unit into our language.</p>
-
-<p>Knowing what transformation it takes to land in this alternative system, we can now think about</p>
-
-<p>2.) How to understand the same type of transformation in another language?
-Similarly as in 3Blue1Brown, I’m going to demonstrate this by performing a 90-degree rotation around the origin. This operation is then denoted by the landing points of rotating both /(i/) and /(j/) in our coordinate system.</p>
-
-<p>[
- M=\begin{pmatrix}
-  0 &amp; -1 \
-  1 &amp; 0
- \end{pmatrix}
-]</p>
-
-<p>Notice that applying M directly to an alternative system is not equal to performing the same 90-degree rotation. Why? Think about a stretched out space! Now the angle between the basis vectors may be greater than 90 degrees, resulting in a different point in space than where we intended to land.</p>
+$$</code>
+Notice that applying M directly to an alternative system is not equal to performing the same 90-degree rotation. Why? Think about a stretched out space! Now the angle between the basis vectors may be greater than 90 degrees, resulting in a different point in space than where we intended to land.</p>
 
 <p>So let’s describe Jennifer’s landing point in her language:
-[
+<code>$$
 \begin{pmatrix}
-  0 &amp; -1 \
+  0 &amp; -1 \\
   1 &amp; 0
  \end{pmatrix}
 \begin{pmatrix}
-  2 &amp; -1 \
+  2 &amp; -1 \\
   1 &amp; 1
  \end{pmatrix}v
-]</p>
+$$</code></p>
 
-<p>That is,</p>
-
-<ul>
-<li>we first understand where Jennifer’s unit vectors are by scaling our bases (in our language)</li>
-<li>then apply the rotation (in our language)</li>
-<li>finally, translate into her language</li>
-</ul>
+<p>That is,
+1. we first understand where Jennifer’s unit vectors are by scaling our bases (in our language)
+2. then apply the rotation (in our language)
+3. finally, translate to her language</p>
 
 <p>The composition of these three matrices gives us the transformation matrix in Jennifer’s matrix.</p>
 
-<p>As a final note let’s generalise what happened here. We had some transformation /(M/) described in our coordinate system, which we translated into another coordinate system:
-/[A^{-1}MA ]/</p>
+<p>As a final note let’s generalise what happened here. We had some transformation <code>\(M\)</code> described in our coordinate system, which we translated into another coordinate system:
+<code>$$A^{-1}MA $$</code></p>
 
 <p>Whenever you see an expression like this, it implies that we have shifted our perspective into an alternative system of coordinates. This will be extremely important for my next post on eigenvalues.</p>
 
