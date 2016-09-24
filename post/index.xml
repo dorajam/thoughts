@@ -59,7 +59,8 @@ When it comes to matrix-vector multiplication, we can think of the matrix in ter
   3\\
   2
  \end{pmatrix}
-$$&lt;/code&gt;is actually equivalent to scaling the column vectors of &lt;code&gt;\(A\)&lt;/code&gt; by the entries of &lt;code&gt;\(v\)&lt;/code&gt;:
+$$&lt;/code&gt;&lt;br /&gt;
+is actually equivalent to scaling the column vectors of &lt;code&gt;\(A\)&lt;/code&gt; by the entries of &lt;code&gt;\(v\)&lt;/code&gt;:
 &lt;code&gt;$$
  Av=2\begin{pmatrix}
   1 \\
@@ -69,7 +70,7 @@ $$&lt;/code&gt;is actually equivalent to scaling the column vectors of &lt;code&
   4 \\
   3
  \end{pmatrix}
- $$&lt;/code&gt;
+ $$&lt;/code&gt;&lt;br /&gt;
 Putting this into new light, this operation can be understood as preserving the component space &lt;code&gt;\(v\)&lt;/code&gt; defined in  our standard coordinate system, but &lt;em&gt;adjusting the basis vectors according to the transformation matrix&lt;/em&gt;. As a result, this new vector is just the linear combination of the same components and of a new set of bases.&lt;/p&gt;
 
 &lt;p&gt;But hey, not so fast! As long as we think of the new bases in terms of some scaled version of &lt;code&gt;\(i\)&lt;/code&gt; and &lt;code&gt;\(j\)&lt;/code&gt;, we are only speaking in our own language. We merely found a translation of a vector from an alternative universe into our system.&lt;/p&gt;
@@ -85,11 +86,11 @@ To carry out this backwards transition we need to apply the inverse of the same 
 &lt;p&gt;I recommend you try to visualise this in your head - or have a look at &lt;a href=&#34;https://www.youtube.com/watch?v=kYB8IZa5AuE&#34;&gt;this&lt;/a&gt;.
 With this I hope it becomes clear that a linear transformation is equivalent to stretching, compressing, rotating, flipping our space and thus, adjusting the gridlines that serve as our reference points.&lt;/p&gt;
 
-&lt;p&gt;We are almost there, yay! By now, you may already be pondering about a couple of things…
-&lt;code&gt;\((i)\)&lt;/code&gt; &lt;em&gt;How is a point in space represented in one system compared to another?&lt;/em&gt;
+&lt;p&gt;We are almost there, yay! By now, you may already be pondering about a couple of things…&lt;br /&gt;
+&lt;code&gt;\((i)\)&lt;/code&gt; &lt;em&gt;How is a point in space represented in one system compared to another?&lt;/em&gt;&lt;br /&gt;
 &lt;code&gt;\((ii)\)&lt;/code&gt; &lt;em&gt;And how do we understand the same linear transformation in another system?&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Let&amp;rsquo;s jump on the first one&amp;hellip;&lt;/strong&gt;
+&lt;p&gt;&lt;strong&gt;Let&amp;rsquo;s jump on the first one&amp;hellip;&lt;/strong&gt;&lt;br /&gt;
 I’m going to rely on my favourite 3Blue1Brown guy’s explanation and use Jennifer as the representative of some alternative coordinate system.
 As stated earlier, a vector is just a scaled version of its bases. Remember, it really is just the product of a matrix (whose columns are the bases) and a vector whose entries are the components). What we did earlier was preserving the component space, but transforming our system of basis to Jennifer&amp;rsquo;s. Once again, let me clarify, this new system of bases is described in our units &lt;code&gt;\(i\)&lt;/code&gt; and &lt;code&gt;\(j\)&lt;/code&gt;.&lt;/p&gt;
 
@@ -100,20 +101,24 @@ So let’s flip this around, and understand a vector from Jennifer’s point of 
 
 &lt;p&gt;To understand what she means by vector &lt;code&gt;\(v\)&lt;/code&gt;:
 &lt;code&gt;$$
-\begin{pmatrix}
+Av=\begin{pmatrix}
   2 &amp;amp; -1 \\
   1 &amp;amp; 1
  \end{pmatrix}
   \begin{pmatrix}
   3\\
   2
+ \end{pmatrix}i=
+  \begin{pmatrix}
+  4\\
+  5
  \end{pmatrix}i
  $$&lt;/code&gt;
 &lt;code&gt;\boldsymbol{\textsl{Change of basis matrix * Vector in our language = her vector in my language}}&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;But for her the same vector is understood as:
 &lt;code&gt;$$
-\begin{pmatrix}
+A^{-1}v=\begin{pmatrix}
   2 &amp;amp; -1 \\
   1 &amp;amp; 1
  \end{pmatrix}^{-1}
@@ -141,7 +146,7 @@ $$&lt;/code&gt;
 
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;Remember, this inverse trick makes it possible to translate back and forth from different coordinate systems.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Let&amp;rsquo;s tackle the second question&amp;hellip;&lt;/strong&gt;
+&lt;p&gt;&lt;strong&gt;Let&amp;rsquo;s tackle the second question&amp;hellip;&lt;/strong&gt;&lt;br /&gt;
 Similarly as in &lt;a href=&#34;https://www.youtube.com/watch?v=P2LTAUO1TdA&#34;&gt;3Blue1Brown&lt;/a&gt;, I’m going to demonstrate this
 by performing a rotation as a transformation. This operation is then denoted by the landing points of rotating both &lt;code&gt;\(i\)&lt;/code&gt; and &lt;code&gt;\(j\)&lt;/code&gt; in our coordinate system.
 &lt;code&gt;$$
@@ -149,7 +154,7 @@ by performing a rotation as a transformation. This operation is then denoted by 
   0 &amp;amp; -1 \\
   1 &amp;amp; 0
  \end{pmatrix}
-$$&lt;/code&gt;
+$$&lt;/code&gt;&lt;br /&gt;
 Notice that applying M directly to an alternative system is not equal to performing the same 90-degree rotation. Why? Think about a stretched out space! Now the angle between the basis vectors may be greater than 90 degrees, resulting in a different point in space than where we intended to land.&lt;/p&gt;
 
 &lt;p&gt;So let’s describe Jennifer’s landing point in her language:
@@ -162,19 +167,18 @@ Notice that applying M directly to an alternative system is not equal to perform
   2 &amp;amp; -1 \\
   1 &amp;amp; 1
  \end{pmatrix}v
-$$&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;That is,
-1. we first understand where Jennifer’s unit vectors are by scaling our bases (in our language)
-2. then apply the rotation (in our language)
+$$&lt;/code&gt;&lt;br /&gt;
+That is,&lt;br /&gt;
+1. we first understand where Jennifer’s unit vectors are by scaling our bases (in our language)&lt;br /&gt;
+2. then apply the rotation (in our language)&lt;br /&gt;
 3. finally, translate to her language&lt;/p&gt;
 
 &lt;p&gt;The composition of these three matrices gives us the transformation matrix in Jennifer’s matrix.&lt;/p&gt;
 
 &lt;p&gt;As a final note let’s generalise what happened here. We had some transformation &lt;code&gt;\(M\)&lt;/code&gt; described in our coordinate system, which we translated into another coordinate system:
-&lt;code&gt;$$A^{-1}MA $$&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Whenever you see an expression like this, it implies that we have shifted our perspective into an alternative system of coordinates. This will be extremely important for my next post on eigenvalues.&lt;/p&gt;
+&lt;code&gt;$$A^{-1}MA
+$$&lt;/code&gt;&lt;br /&gt;
+Whenever you see an expression like this, it implies that we have shifted our perspective into an alternative system of coordinates. This will be extremely important for my next post on eigenvalues.&lt;/p&gt;
 </description>
     </item>
     
