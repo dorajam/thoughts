@@ -1004,7 +1004,7 @@ nav#navbar-main li {
 }
 
 pre {
-    background-color: none;
+    background-color: transparent;
     border: none;
     font-size = 100%;
 }
