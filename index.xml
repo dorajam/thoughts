@@ -55,13 +55,13 @@ Remember equation &lt;code&gt;\((1)\)&lt;/code&gt;, we can derive the eigenpairs
 &lt;p&gt;If this wasn’t fascinating enough, allow me to keep going.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Dimensionality Reduction and eigenbases&lt;/strong&gt;&lt;br /&gt;
-You may have heard that this can all be applied to &lt;strong&gt;dimensionality reduction&lt;/strong&gt;. Let’s see how so.
+You may have heard that this can all be applied to dimensionality reduction. Let’s see how so.
 Eigenvectors are linearly independent. That means, that no eigenvector can be reconstructed by taking a linear combination of another eigenvector: we just simply need them all! This might already make you ponder, would it be possible to switch from using our standard basis vectors to using these powerful eigenvectors that share this special quality? Well it depends.&lt;/p&gt;
 
 &lt;p&gt;There are three scenarios when decomposing eigenvectors:&lt;br /&gt;
-&lt;strong&gt;(i)&lt;/strong&gt; &lt;em&gt;no eigenvectors exist&lt;/em&gt;&lt;br /&gt;
-&lt;strong&gt;(ii)&lt;/strong&gt; &lt;em&gt;the number of eigenvectors is less than the number of dimensions&lt;/em&gt;&lt;br /&gt;
-&lt;strong&gt;(iii)&lt;/strong&gt; &lt;em&gt;the number of eigenvectors is the same as the number of dimensions&lt;/em&gt;&lt;/p&gt;
+&lt;code&gt;\((i)\)&lt;/code&gt; &lt;em&gt;no eigenvectors exist&lt;/em&gt;&lt;br /&gt;
+&lt;code&gt;\((ii)\)&lt;/code&gt; &lt;em&gt;the number of eigenvectors is less than the number of dimensions&lt;/em&gt;&lt;br /&gt;
+&lt;code&gt;\((iii\))&lt;/code&gt; &lt;em&gt;the number of eigenvectors is the same as the number of dimensions&lt;/em&gt;&lt;/p&gt;
 </description>
     </item>
     
