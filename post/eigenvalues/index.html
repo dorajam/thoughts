@@ -85,29 +85,26 @@
 
 <p>Recognising this for myself has made me develop quite a strong love for the field. With this post, I will attempt to give you a fun introduction to the significance of eigenvalues and thereby hope you’ll start seeing the bright light at the end of the tunnel of all those dry mathematical derivations.</p>
 
-<p><strong>An introduction to eigenvectors and eigenvalues</strong>
+<p><strong>An introduction to eigenvectors and eigenvalues</strong><br />
 And here we begin. You have probably stumbled upon the definition of eigenvalues:
 <code>$$
-\begin{align}
 AV=\lambda v
-\end{align}
-$$</code></p>
-
-<p>Where <code>\(v\)</code> is an eigenvector and <code>\(\lambda \)</code> is the corresponding eigenvalue. Let’s look at the right side first: You have a vector <code>\(v\)</code> that you apply the linear transformation <code>\(A\)</code>. On the left: you have the same <code>\(v\)</code> vector, but now scaled by some scalar value.</p>
+$$</code><br />
+Where <code>\(v\)</code> is an eigenvector and <code>\(\lambda \)</code> is the corresponding eigenvalue. Let’s look at the right side first: You have a vector <code>\(v\)</code> that you apply the linear transformation <code>\(A\)</code>. On the left: you have the same <code>\(v\)</code> vector, but now scaled by some scalar value.</p>
 
 <p>So you can think of eigenvectors as vectors that do not change their direction after some linear transformation, but merely get scaled by some value. (well, they get reversed if the eigenvalue is negative).</p>
 
-<p>Now going back to the world of linear transformation, you can think of <code>\(A\)</code> as some linear transformation and <code>\(v\)</code> as a vector that’s a linear combination of the bases of the space it is defined in (let’s say v = alpha*i + beta*j where alpha and beta are members of the component space). When applying A linear transformation to v, you are actually transforming the whole vector space v was defined in. But hey v was defined in terms of the bases of that space (e.g. i and j), so the bases of the new vector ‘Av&rsquo; will be some new i&rsquo; and j’ basis vectors. This is where it is extremely <em>important</em> that you understand what’s going on visually.</p>
+<p>Now going back to the world of linear transformation, you can think of <code>\(A\)</code> as some linear transformation and <code>\(v\)</code> as a vector that’s a linear combination of the bases of the space it is defined in (let’s say <code>\(v = \alpha i + \beta j\)</code> where <code>\(\alpha\)</code> and <code>\(\beta\)</code> are members of the component space). When applying A linear transformation to <code>\(v\)</code>, you are actually transforming the whole vector space it was defined in. But hey <code>\(v\)</code> was defined in terms of the bases of that space (e.g. <code>\(i\)</code> and <code>\(j\)</code>), so the bases of the new vector ‘(Av)&rsquo; will be some new basis vectors. This is where it is extremely <em>important</em> that you understand what’s going on visually.</p>
 
 <p>If you have difficulty internalising this, I very much recommend you read my previous post on <a href="https://dorajam.github.io/thoughts/post/change-of-basis/">changing the basis</a> of some vector space.</p>
 
 <p>With this in mind, we can think of eigenvectors as vectors that preserve their directions in this new transformed universe. What’s so fascinating about this is that we can transform any vector from the original vector space into this new space just by knowing what the transformation’s eigenpairs are. Doing this will allow us to reduce massive amounts of information that’s needed to reconstruct all points in this new, transformed universe!</p>
 
-<p><strong>What’s more, we can think about eigenvalues in terms of polynomials!</strong>
+<p><strong>What’s more, we can think about eigenvalues in terms of polynomials!</strong><br />
 The concept of roots is important as they serve as some fixed ground to a polynomial. Upon finding all roots to a function, we have some notion of the function shape. The same way, we can think of eigenvectors as some components of a vector space that limit the behaviour of a linear transformation.</p>
 
 <p>Good news, you don’t need to blindly trust me on this one.
-Remember equation <code>\((1)\)</code>, we can derive the eigenpairs by finding the null space of the determinant of <code>\(A - \lambda I\)</code> (i.e. det(A-/\I) = 0). If A is R(nxn) then the determinant of the latter term will result in a polynomial of degree n. By the fundamental theorem of algebra, a polynomial of degree n has n (not necessarily unique) complex roots. These are the eigenvalues of A. We can think about these values as <em>”how much should linear transformation A be distorted so that we’ll end up in null space?”</em></p>
+Remember equation <code>\((1)\)</code>, we can derive the eigenpairs by finding the null space of the <code>\(determinant of A - \lambda I\)</code> (i.e. det(A-/\I) = 0). If A is R(nxn) then the determinant of the latter term will result in a polynomial of degree n. By the fundamental theorem of algebra, a polynomial of degree n has n (not necessarily unique) complex roots. These are the eigenvalues of A. We can think about these values as <em>”how much should linear transformation A be distorted so that we’ll end up in null space?”</em></p>
 
 <p>Why do we care about ending up in null space? Because this is the place where things go extinct. There is no way of reconstructing the previous vector space if all dimensions cease to exist. Think about matrix inversion! You could not flip space back into its original state as you just lost all your information about where you were (with no notation of basis!)</p>
 
@@ -117,13 +114,13 @@ Remember equation <code>\((1)\)</code>, we can derive the eigenpairs by finding 
 
 <p>If this wasn’t fascinating enough, allow me to keep going.</p>
 
-<p><strong>Dimensionality Reduction and eigenbases</strong>
+<p><strong>Dimensionality Reduction and eigenbases</strong><br />
 You may have heard that this can all be applied to <strong>dimensionality reduction</strong>. Let’s see how so.
 Eigenvectors are linearly independent. That means, that no eigenvector can be reconstructed by taking a linear combination of another eigenvector: we just simply need them all! This might already make you ponder, would it be possible to switch from using our standard basis vectors to using these powerful eigenvectors that share this special quality? Well it depends.</p>
 
-<p>There are three scenarios when decomposing eigenvectors:
-<strong>(i)</strong> <em>no eigenvectors exist</em>
-<strong>(ii)</strong> <em>the number of eigenvectors is less than the number of dimensions</em>
+<p>There are three scenarios when decomposing eigenvectors:<br />
+<strong>(i)</strong> <em>no eigenvectors exist</em><br />
+<strong>(ii)</strong> <em>the number of eigenvectors is less than the number of dimensions</em><br />
 <strong>(iii)</strong> <em>the number of eigenvectors is the same as the number of dimensions</em></p>
 
     </section>
