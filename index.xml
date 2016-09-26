@@ -34,7 +34,7 @@ Where &lt;code&gt;\(v\)&lt;/code&gt; is an eigenvector and &lt;code&gt;\(\lambda
 
 &lt;p&gt;So you can think of eigenvectors as vectors that do not change their direction after some linear transformation, but merely get scaled by some value. (well, they get reversed if the eigenvalue is negative).&lt;/p&gt;
 
-&lt;p&gt;Now going back to the world of linear transformation, you can think of &lt;code&gt;\(A\)&lt;/code&gt; as some linear transformation and &lt;code&gt;\(v\)&lt;/code&gt; as a vector that’s a linear combination of the bases of the space it is defined in (let’s say &lt;code&gt;\(v = \alpha i + \beta j\)&lt;/code&gt; where &lt;code&gt;\(\alpha\)&lt;/code&gt; and &lt;code&gt;\(\beta\)&lt;/code&gt; are members of the component space). When applying A linear transformation to &lt;code&gt;\(v\)&lt;/code&gt;, you are actually transforming the whole vector space it was defined in. But hey &lt;code&gt;\(v\)&lt;/code&gt; was defined in terms of the bases of that space (e.g. &lt;code&gt;\(i\)&lt;/code&gt; and &lt;code&gt;\(j\)&lt;/code&gt;), so the bases of the new vector ‘(Av)&amp;rsquo; will be some new basis vectors. This is where it is extremely &lt;em&gt;important&lt;/em&gt; that you understand what’s going on visually.&lt;/p&gt;
+&lt;p&gt;Now going back to the world of linear transformation, you can think of &lt;code&gt;\(A\)&lt;/code&gt; as some linear transformation and &lt;code&gt;\(v\)&lt;/code&gt; as a vector that’s a linear combination of the bases of the space it is defined in (let’s say &lt;code&gt;\(v = \alpha i + \beta j\)&lt;/code&gt; where &lt;code&gt;\(\alpha\)&lt;/code&gt; and &lt;code&gt;\(\beta\)&lt;/code&gt; are members of the component space). When applying &lt;code&gt;\(A\)&lt;/code&gt; linear transformation to &lt;code&gt;\(v\)&lt;/code&gt;, you are actually transforming the whole vector space it was defined in. But hey &lt;code&gt;\(v\)&lt;/code&gt; was defined in terms of the bases of that space (e.g. &lt;code&gt;\(i\)&lt;/code&gt; and &lt;code&gt;\(j\)&lt;/code&gt;), so the bases of the new vector ‘(Av)&amp;rsquo; will be some new basis vectors. This is where it is extremely &lt;em&gt;important&lt;/em&gt; that you understand what’s going on visually.&lt;/p&gt;
 
 &lt;p&gt;If you have difficulty internalising this, I very much recommend you read my previous post on &lt;a href=&#34;https://dorajam.github.io/thoughts/post/change-of-basis/&#34;&gt;changing the basis&lt;/a&gt; of some vector space.&lt;/p&gt;
 
@@ -61,7 +61,7 @@ Eigenvectors are linearly independent. That means, that no eigenvector can be re
 &lt;p&gt;There are three scenarios when decomposing eigenvectors:&lt;br /&gt;
 &lt;code&gt;\((i)\)&lt;/code&gt; &lt;em&gt;no eigenvectors exist&lt;/em&gt;&lt;br /&gt;
 &lt;code&gt;\((ii)\)&lt;/code&gt; &lt;em&gt;the number of eigenvectors is less than the number of dimensions&lt;/em&gt;&lt;br /&gt;
-&lt;code&gt;\((iii\))&lt;/code&gt; &lt;em&gt;the number of eigenvectors is the same as the number of dimensions&lt;/em&gt;&lt;/p&gt;
+&lt;code&gt;\((iii)\)&lt;/code&gt; &lt;em&gt;the number of eigenvectors is the same as the number of dimensions&lt;/em&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -72,22 +72,22 @@ Eigenvectors are linearly independent. That means, that no eigenvector can be re
       
       <guid>https://dorajam.github.io/thoughts/post/change-of-basis/</guid>
       <description>&lt;p&gt;A fascinating characteristic of the human mind is the ability to make connections between
- different objects and phenomena. The set of mutual beliefs, knowledge and assumptions all serves
+ different objects and phenomena. The set of mutual beliefs, knowledge and assumptions all serve
   as a common ground that enables us to gain a deeper understanding about our surroundings.&lt;/p&gt;
 
-&lt;p&gt;You can think of units as the words and expressions that define a language. I say ‘apple’
+&lt;p&gt;You can think of words and expressions as some units that define a language. I say ‘apple’
  in my language, which you may or may not perceive as the same object depending whether you
  speak the same language as me.&lt;/p&gt;
 
 &lt;p&gt;To represent different points in space we need some sort of unit of measurement that allows
  us to speak about things in the same language. Space has no intrinsic grid. Choosing a unit
-  of basis is what will allow us to break space into some imaginary gridlines. Along these grids
-   we can now describe any points in space. Consequently, we can think about our choice of basis as a constructing element or brick that makes up a whole.&lt;/p&gt;
+  of measurement is what will allow us to break space into some imaginary gridlines. Along these grids
+   we can now describe any point in space. Consequently, we can think about our choice of basis as a constructing element or building block that makes up a whole.&lt;/p&gt;
 
-&lt;p&gt;Now imagine a flat world, a two-dimensional universe or plane that’s defined along x and y axes.
+&lt;p&gt;Now let&amp;rsquo;s imagine a two-dimensionalplane that’s defined along x and y axes.
  The conventional way of representing points in 2D space is
  to use the standard coordinate system, defined by the basis vectors &lt;code&gt;\(i\)&lt;/code&gt; and &lt;code&gt;\(j\)&lt;/code&gt;.
-  (Notice, this is just a choice we have collectively made. We could also represent points in 2D using some alternative units of measurement i.e. along some different set of gridlines).&lt;/p&gt;
+  (Notice, this is just a convention. We could also represent points in 2D using some alternative units of measurement i.e. along some different set of gridlines).&lt;/p&gt;
 
 &lt;p&gt;We can now think of a vector as a scaled version of our chosen basis vectors &lt;code&gt;\(i\)&lt;/code&gt; and &lt;code&gt;\(j\)&lt;/code&gt;:
 &lt;code&gt;$$
@@ -107,16 +107,16 @@ Eigenvectors are linearly independent. That means, that no eigenvector can be re
 $$&lt;/code&gt;&lt;br /&gt;
 or put differently, a linear combination of the bases of our vector space:
 &lt;code&gt;$$
- v=2\begin{pmatrix}
+ v=3\begin{pmatrix}
   1 \\
   0
  \end{pmatrix}+
-  3\begin{pmatrix}
+  2\begin{pmatrix}
   0 \\
   1
  \end{pmatrix}
  $$&lt;/code&gt;&lt;br /&gt;
-&lt;strong&gt;Some thoughts on linear transformation&lt;/strong&gt;&lt;br /&gt;
+&lt;strong&gt;Some thoughts on linear transformations&lt;/strong&gt;&lt;br /&gt;
 Similarly to the above, when it comes to matrix-vector multiplication, we can think of the matrix in terms of some linear transformation that will redefine the bases of the coordinate system. Applying transformation &lt;code&gt;\(A\)&lt;/code&gt; to vector &lt;code&gt;\(v\)&lt;/code&gt;,
 &lt;code&gt;$$
  Av=\begin{pmatrix}
@@ -130,16 +130,16 @@ Similarly to the above, when it comes to matrix-vector multiplication, we can th
 $$&lt;/code&gt;&lt;br /&gt;
 is actually equivalent to scaling the column vectors of &lt;code&gt;\(A\)&lt;/code&gt; by the entries of &lt;code&gt;\(v\)&lt;/code&gt;:
 &lt;code&gt;$$
- Av=2\begin{pmatrix}
+ Av=3\begin{pmatrix}
   1 \\
   2
  \end{pmatrix}+
-  3\begin{pmatrix}
+  2\begin{pmatrix}
   4 \\
   3
  \end{pmatrix}
  $$&lt;/code&gt;&lt;br /&gt;
-Putting this into new light, this operation can be understood as preserving the component space &lt;code&gt;\(v\)&lt;/code&gt; defined in  our standard coordinate system, but &lt;em&gt;adjusting the basis vectors according to the transformation matrix&lt;/em&gt;. As a result, this new vector is just the linear combination of the same components and of a new set of bases.&lt;/p&gt;
+Putting this into new light, this operation can be understood as preserving the component space &lt;code&gt;\(v\)&lt;/code&gt; defined in  our standard coordinate system, but &lt;em&gt;adjusting the basis vectors according to the transformation matrix&lt;/em&gt;. As a result, this new vector is just the linear combination of the same components and of a new basis.&lt;/p&gt;
 
 &lt;p&gt;But hey, not so fast! As long as we think of the new bases in terms of some scaled version of &lt;code&gt;\(i\)&lt;/code&gt; and &lt;code&gt;\(j\)&lt;/code&gt;, we are only speaking in our own language. We merely found a translation of a vector from an alternative universe into our system.&lt;/p&gt;
 
@@ -161,7 +161,7 @@ I hope by now you are starting to see that linear transformations are really jus
 &lt;p&gt;&lt;strong&gt;Let&amp;rsquo;s jump on the first one&amp;hellip;&lt;/strong&gt;&lt;br /&gt;
 I’m going to rely on my favourite 3Blue1Brown guy’s explanation and use Jennifer as the
 representative of some alternative coordinate system.
-As stated earlier, a vector is just a scaled version of its bases. Remember, it really is just the product of a matrix (whose columns are the bases) and a vector whose entries are the components). What we did earlier was preserving the component space, but transforming our system of basis to Jennifer&amp;rsquo;s. Once again, let me clarify, this new system of bases is described in our units &lt;code&gt;\(i\)&lt;/code&gt; and &lt;code&gt;\(j\)&lt;/code&gt;.&lt;/p&gt;
+As stated earlier, a vector is just a scaled version of its bases. Remember, it really is just the product of a matrix (whose columns are the bases) and a vector (whose entries are the components). What we did earlier was preserving the component space, but transforming our system of basis to Jennifer&amp;rsquo;s. Once again, let me clarify, this new system of bases is described in our units &lt;code&gt;\(i\)&lt;/code&gt; and &lt;code&gt;\(j\)&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;Geometrically this transformation can give us an insight into what Jennifer’s system is like, yet mathematically it is a translation of her world to our world.&lt;/p&gt;
 

@@ -76,22 +76,22 @@
 
     <section class="post-content">
         <p>A fascinating characteristic of the human mind is the ability to make connections between
- different objects and phenomena. The set of mutual beliefs, knowledge and assumptions all serves
+ different objects and phenomena. The set of mutual beliefs, knowledge and assumptions all serve
   as a common ground that enables us to gain a deeper understanding about our surroundings.</p>
 
-<p>You can think of units as the words and expressions that define a language. I say ‘apple’
+<p>You can think of words and expressions as some units that define a language. I say ‘apple’
  in my language, which you may or may not perceive as the same object depending whether you
  speak the same language as me.</p>
 
 <p>To represent different points in space we need some sort of unit of measurement that allows
  us to speak about things in the same language. Space has no intrinsic grid. Choosing a unit
-  of basis is what will allow us to break space into some imaginary gridlines. Along these grids
-   we can now describe any points in space. Consequently, we can think about our choice of basis as a constructing element or brick that makes up a whole.</p>
+  of measurement is what will allow us to break space into some imaginary gridlines. Along these grids
+   we can now describe any point in space. Consequently, we can think about our choice of basis as a constructing element or building block that makes up a whole.</p>
 
-<p>Now imagine a flat world, a two-dimensional universe or plane that’s defined along x and y axes.
+<p>Now let&rsquo;s imagine a two-dimensionalplane that’s defined along x and y axes.
  The conventional way of representing points in 2D space is
  to use the standard coordinate system, defined by the basis vectors <code>\(i\)</code> and <code>\(j\)</code>.
-  (Notice, this is just a choice we have collectively made. We could also represent points in 2D using some alternative units of measurement i.e. along some different set of gridlines).</p>
+  (Notice, this is just a convention. We could also represent points in 2D using some alternative units of measurement i.e. along some different set of gridlines).</p>
 
 <p>We can now think of a vector as a scaled version of our chosen basis vectors <code>\(i\)</code> and <code>\(j\)</code>:
 <code>$$
@@ -111,16 +111,16 @@
 $$</code><br />
 or put differently, a linear combination of the bases of our vector space:
 <code>$$
- v=2\begin{pmatrix}
+ v=3\begin{pmatrix}
   1 \\
   0
  \end{pmatrix}+
-  3\begin{pmatrix}
+  2\begin{pmatrix}
   0 \\
   1
  \end{pmatrix}
  $$</code><br />
-<strong>Some thoughts on linear transformation</strong><br />
+<strong>Some thoughts on linear transformations</strong><br />
 Similarly to the above, when it comes to matrix-vector multiplication, we can think of the matrix in terms of some linear transformation that will redefine the bases of the coordinate system. Applying transformation <code>\(A\)</code> to vector <code>\(v\)</code>,
 <code>$$
  Av=\begin{pmatrix}
@@ -134,16 +134,16 @@ Similarly to the above, when it comes to matrix-vector multiplication, we can th
 $$</code><br />
 is actually equivalent to scaling the column vectors of <code>\(A\)</code> by the entries of <code>\(v\)</code>:
 <code>$$
- Av=2\begin{pmatrix}
+ Av=3\begin{pmatrix}
   1 \\
   2
  \end{pmatrix}+
-  3\begin{pmatrix}
+  2\begin{pmatrix}
   4 \\
   3
  \end{pmatrix}
  $$</code><br />
-Putting this into new light, this operation can be understood as preserving the component space <code>\(v\)</code> defined in  our standard coordinate system, but <em>adjusting the basis vectors according to the transformation matrix</em>. As a result, this new vector is just the linear combination of the same components and of a new set of bases.</p>
+Putting this into new light, this operation can be understood as preserving the component space <code>\(v\)</code> defined in  our standard coordinate system, but <em>adjusting the basis vectors according to the transformation matrix</em>. As a result, this new vector is just the linear combination of the same components and of a new basis.</p>
 
 <p>But hey, not so fast! As long as we think of the new bases in terms of some scaled version of <code>\(i\)</code> and <code>\(j\)</code>, we are only speaking in our own language. We merely found a translation of a vector from an alternative universe into our system.</p>
 
@@ -165,7 +165,7 @@ I hope by now you are starting to see that linear transformations are really jus
 <p><strong>Let&rsquo;s jump on the first one&hellip;</strong><br />
 I’m going to rely on my favourite 3Blue1Brown guy’s explanation and use Jennifer as the
 representative of some alternative coordinate system.
-As stated earlier, a vector is just a scaled version of its bases. Remember, it really is just the product of a matrix (whose columns are the bases) and a vector whose entries are the components). What we did earlier was preserving the component space, but transforming our system of basis to Jennifer&rsquo;s. Once again, let me clarify, this new system of bases is described in our units <code>\(i\)</code> and <code>\(j\)</code>.</p>
+As stated earlier, a vector is just a scaled version of its bases. Remember, it really is just the product of a matrix (whose columns are the bases) and a vector (whose entries are the components). What we did earlier was preserving the component space, but transforming our system of basis to Jennifer&rsquo;s. Once again, let me clarify, this new system of bases is described in our units <code>\(i\)</code> and <code>\(j\)</code>.</p>
 
 <p>Geometrically this transformation can give us an insight into what Jennifer’s system is like, yet mathematically it is a translation of her world to our world.</p>
 
