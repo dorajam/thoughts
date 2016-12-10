@@ -17,12 +17,11 @@
       <guid>https://dorajam.github.io/thoughts/post/eigenvalues/</guid>
       <description>&lt;p&gt;The primary purpose of this post is to provide a thorough visual intuition behind the significance and beauty of eigenvalues. As I will not cover much of the mathematical derivations behind core concepts, I suggest you use this post to complement additional resources.&lt;/p&gt;
 
-&lt;p&gt;The focus here is going to be on understanding the big picture, why those math derivations reveal something so important and applicable about eigenvalues. I hope that this will help you to go from thinking about eigenvalues as a dry math formula to thinking of them as a beautiful phenomena in high-dimensional spaces.&lt;/p&gt;
+&lt;p&gt;The focus here is going to be on understanding the big picture, why those math derivations reveal something so important and applicable about eigenvalues. I hope that this will help you to go from thinking about eigenvalues as some dry mathematical concepts to thinking of them as a beautiful phenomena in high-dimensional spaces.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;An introduction to eigenvectors and eigenvalues&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;And here it begins. You have probably stumbled upon the definition of eigenvalues:
-se of this post is to provide a thorough visual intuition behind the significance and beauty of eigenvalues. As I will not cover much of the mathematical derivations behind core concepts, I suggest you use this post to complement additional resources.&lt;/p&gt;
+&lt;p&gt;And here it begins. You have probably stumbled upon the definition of eigenvalues:&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;$$
 AV=\lambda v
@@ -31,7 +30,8 @@ Where &lt;code&gt;\(v\)&lt;/code&gt; is an eigenvector and &lt;code&gt;\(\lambda
 
 &lt;p&gt;So you can think of eigenvectors as vectors that do not change their direction after some linear transformation (unless the eigenvalue is negative), but merely get scaled by some value.&lt;/p&gt;
 
-&lt;p&gt;Now going back to the world of linear transformation, you can think of &lt;code&gt;\(A\)&lt;/code&gt; as some linear transformation and &lt;code&gt;\(v\)&lt;/code&gt; as a vector that’s a linear combination of the bases of the space it is defined in (let’s say &lt;code&gt;\(v = \alpha i + \beta j\)&lt;/code&gt; where &lt;code&gt;\(\alpha\)&lt;/code&gt; and &lt;code&gt;\(\beta\)&lt;/code&gt; are members of the component space). When applying &lt;code&gt;\(A\)&lt;/code&gt; linear transformation to &lt;code&gt;\(v\)&lt;/code&gt;, you are actually transforming the whole vector space it was defined in. But hey &lt;code&gt;\(v\)&lt;/code&gt; was defined in terms of the bases of that space (e.g. &lt;code&gt;\(i\)&lt;/code&gt; and &lt;code&gt;\(j\)&lt;/code&gt;), so the bases of the new vector ‘(Av)&amp;rsquo; will be some new basis vectors. This is where it is extremely &lt;em&gt;important&lt;/em&gt; that you understand what’s going on visually.&lt;/p&gt;
+&lt;p&gt;Now going back to the world of linear transformation, you can think of &lt;code&gt;\(A\)&lt;/code&gt; as some linear transformation and &lt;code&gt;\(v\)&lt;/code&gt; as a vector that’s a linear combination of the bases of the space it is defined in (let’s say &lt;code&gt;\(v = \alpha i + \beta j\)&lt;/code&gt; where &lt;code&gt;\(\alpha\)&lt;/code&gt; and &lt;code&gt;\(\beta\)&lt;/code&gt; are members of the component space). When applying &lt;code&gt;\(A\)&lt;/code&gt; linear transformation to &lt;code&gt;\(v\)&lt;/code&gt;, you are actually transforming the whole vector space it was defined in.
+But hey &lt;code&gt;\(v\)&lt;/code&gt; was defined in terms of the bases of that space (e.g. &lt;code&gt;\(i\)&lt;/code&gt; and &lt;code&gt;\(j\)&lt;/code&gt;), so the bases of the new vector &lt;code&gt;\(Av\)&lt;/code&gt; will be some new basis vectors. This is where it is extremely &lt;em&gt;important&lt;/em&gt; that you understand what’s going on visually.&lt;/p&gt;
 
 &lt;p&gt;If you have difficulty internalising this, I very much recommend you read my previous post on &lt;a href=&#34;https://dorajam.github.io/thoughts/post/change-of-basis/&#34;&gt;changing the basis&lt;/a&gt; of a vector space.&lt;/p&gt;
 
@@ -41,7 +41,7 @@ Where &lt;code&gt;\(v\)&lt;/code&gt; is an eigenvector and &lt;code&gt;\(\lambda
 The concept of roots is important as they serve as some fixed ground to a polynomial. Upon finding all roots to a function, we have some notion of the function shape. The same way, we can think of eigenvectors as some components of a vector space that limit the behaviour of a linear transformation.&lt;/p&gt;
 
 &lt;p&gt;Good news, you don’t need to blindly trust me on this one.
-Remember equation &lt;code&gt;\((1)\)&lt;/code&gt;, we can derive the eigenpairs by finding the null space of the &lt;code&gt;\(|A - \lambda I|\)&lt;/code&gt; (i.e. &lt;code&gt;\(det(A - \lambda I) = 0\)&lt;/code&gt;). If A is R(nxn) then the determinant of the latter term will result in a polynomial of degree n. By the fundamental theorem of algebra, a polynomial of degree n has n (not necessarily unique) complex roots. These are the eigenvalues of A. We can think about these values as &lt;em&gt;”how much should linear transformation A be distorted so that we’ll end up in null space?”&lt;/em&gt;&lt;/p&gt;
+Based on the definition, we can now derive the eigenpairs by finding the null space of the &lt;code&gt;\(|A - \lambda I|\)&lt;/code&gt; (i.e. &lt;code&gt;\(det(A - \lambda I) = 0\)&lt;/code&gt;). If A is R(nxn) then the determinant of the latter term will result in a polynomial of degree n. By the fundamental theorem of algebra, a polynomial of degree n has n (not necessarily unique) complex roots. These are the eigenvalues of A. We can think about these values as &lt;em&gt;”how much should we distort a linear transformation so that we’ll end up in null space?”&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Why do we care about ending up in null space? Because this is the place where things go extinct. There is no way of reconstructing the previous vector space if all dimensions cease to exist. Think about matrix inversion! You could not flip space back into its original state as you just lost all your information about where you were (with no notation of basis!)&lt;/p&gt;
 
@@ -59,6 +59,19 @@ Eigenvectors are linearly independent. That means, that no eigenvector can be re
 &lt;code&gt;\((i)\)&lt;/code&gt; &lt;em&gt;no eigenvectors exist&lt;/em&gt;&lt;br /&gt;
 &lt;code&gt;\((ii)\)&lt;/code&gt; &lt;em&gt;the number of eigenvectors is less than the number of dimensions&lt;/em&gt;&lt;br /&gt;
 &lt;code&gt;\((iii)\)&lt;/code&gt; &lt;em&gt;the number of eigenvectors is the same as the number of dimensions&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;**scenario i.  **&lt;br /&gt;
+As mentioned in my previous post on the change of basis, it is up to us what unit of basis we choose to interpret the high-dimensional space in. Given that we have n eigenvectors for an n-dimensional space, we can switch to using the eigenvectors as our basis vectors. This is also referred to as using an “eigenbasis”. If you do end up having n eigenvectors, it is very much recommended to think of your system in terms of these alternative units of basis as they are the most effective in describing the variance of your data. You can get an insight into the variance of your datapoints with respect to their bases (a.k.a. their explanatory or independent variables) by their relative spread towards the different directions.&lt;/p&gt;
+
+&lt;p&gt;As for dimensionality reduction, you might be thinking in this scenario it would not be possible to get rid of dimensions because, as I said, “we just need them all”. Good news there are scenarios when some eigenvectors can be neglected. For example, imagine a 3D world where two dimensions are way more stretched out as the third dimension. In this case, if the third dimension is below some threshold, we can say that it doesn’t add to the richness of the representation of the space, hence should be neglected. This of course comes at the cost of reducing the richness of your data.&lt;/p&gt;
+
+&lt;p&gt;**scenario ii.  **
+We may also end up finding less eigenvectors as the number of dimensions of our vector space. Again we could choose to use our eigenvectors as our basis vectors. But notice that if we were to do that, we would automatically end up in a subspace of our original space. This would prevent us from reapplying the same operation to a lower-dimensional space.&lt;/p&gt;
+
+&lt;p&gt;scenario iii.&lt;br /&gt;
+It may not be possible to find any eigenpairs (more complex high-dimensional problems will generally have eigenvectors though). For example, a polynomial could end up having no real roots, implying the lack of eigenvalues in the space of real numbers. But even upon the existence of real roots, we might find no eigenvectors that would satisfy the basic definition described above.&lt;/p&gt;
+
+&lt;p&gt;There is another problematic situation you may encounter in this scenario. Finding the eigen-pair that satisfies the definition above only makes sense for linear transformations by square matrices. This holds because we cannot evaluate the preservation of direction between two vector spaces that have different dimensionality.&lt;/p&gt;
 </description>
     </item>
     
