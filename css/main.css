@@ -752,7 +752,7 @@ hr {
 }
 #site-header {
     text-align: center;
-    min-height: 15em;
+    min-height: 13em;
     padding-top: 2em;
 }
 @media (max-width: 800px) {
